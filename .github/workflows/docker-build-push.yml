@@ -21,8 +21,8 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.HARBOR_REGISTRY }}/fudbalska_taktika_pro:latest .
+        docker build -t ${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest .
 
     - name: Push to Harbor
       run: |
-        docker push ${{ secrets.HARBOR_REGISTRY }}/fudbalska_taktika_pro:latest
+        docker push ${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest
