@@ -26,3 +26,4 @@ jobs:
     - name: Push to Harbor
       run: |
         docker push registry.analitika.tech/${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest
+
