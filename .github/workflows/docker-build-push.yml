@@ -15,14 +15,14 @@ jobs:
     - name: Login to Harbor
       uses: docker/login-action@v3
       with:
-        registry: ${{ secrets.HARBOR_REGISTRY }}
+        registry: registry.analitika.tech
         username: ${{ secrets.HARBOR_USERNAME }}
         password: ${{ secrets.HARBOR_PASSWORD }}
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest .
+        docker build -t registry.analitika.tech/${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest .
 
     - name: Push to Harbor
       run: |
-        docker push ${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest
+        docker push registry.analitika.tech/${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest
