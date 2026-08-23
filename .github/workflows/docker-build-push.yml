@@ -21,9 +21,9 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t registry.analitika.tech/${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest .
+        docker build -t registry.analitika.tech/footbal-tactic-pro/app:latest .
 
     - name: Push to Harbor
       run: |
-        docker push registry.analitika.tech/${{ secrets.HARBOR_REGISTRY }}/fudbalskataktikapro:latest
+        docker push registry.analitika.tech/footbal-tactic-pro/app:latest
 
